@@ -18,11 +18,9 @@ Build a website for the Audubon Society!
 1. Fulfill the listed requirements.
 
 Create a new React app in the root of this repository (i.e.
-`create-react-app .`) and build your project out from there. You are required to
+`create-react-app audubonApp`) and build your project out from there. You are required to
 turn in your submission by making a pull request on the original repository.
 
-Unless otherwise specified on the calendar or by an instructor, homework is due
-the next morning by 9:00am.
 
 ## Requirements
 
@@ -149,5 +147,5 @@ Plagiarized work will not be accepted.
 ## [License](LICENSE)
 
 1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
+2.  All software code is licensed under GNU GPLv3. For commercial use or
     alternative licensing, please contact legal@ga.co.
