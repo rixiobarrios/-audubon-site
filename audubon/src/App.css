@@ -1,0 +1,27 @@
+nav {
+  background-color: darkslategrey;
+  color: white;
+  padding: 2px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+nav h1 {
+  padding-left: 100px;
+}
+
+.birdContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 150px;
+}
+
+.birdContainer img {
+  width: 150px;
+  padding: 50px;
+}
