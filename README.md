@@ -18,16 +18,14 @@ Build a website for the Audubon Society!
 1. Fulfill the listed requirements.
 
 Create a new React app in the root of this repository (i.e.
-`create-react-app audubonApp`) and build your project out from there. You are required to
+`npx create-react-app audubonApp`) and build your project out from there. You are required to
 turn in your submission by making a pull request on the original repository.
-
 
 ## Requirements
 
-The Audubon Society has asked you to build them a website where users can upload
-pictures of birds and see those pictures in their own dedicated show page. So,
-your app will have Create and Read. Your app should therefore have the following
-pages:
+The Audubon Society has asked you to build them a website where users can see an index of bird images and be able to click on any given bird to see more information about that single bird on their own dedicated show page. 
+
+### Required Pages / Views
 
 **Home Page:** Users should see a thumbnail image for each bird. Clicking on the
 bird image should take the user to the show page for that bird.
@@ -38,20 +36,18 @@ Audubon Field Guide page for that bird. Birds for which there is an active
 conservation effort will have a Conservation Status (not all birds will have
 this though).
 
-### Bonus
+### Other Requirements
 
-**Create Page:** Users should be able to navigate to this page from the
-homepage. It should have a form for adding a new bird with fields for:
+**React Router:** Implement React Router into your app.
 
-- `name`: the bird's common name
-- `genus`: the bird's scientific name
-- `conservationStatus`: If there is a conservation status for the bird
-- `image`: an image of the bird
-- `homepage`: a link to the Audubon Field Guide page.
+  - The home page should load when the url ending is `/` 
+  - The show page should load when the url ending includes the name of the bird, for example `/Acadian+Flycatcher` would take the user to the show page for the Acadian Flycatcher
 
-## Mocks
+**Styling:**
 
-Build your app to the following mocks:
+Format your HTML and write the CSS of your app to look like the following mockups:
+
+_NOTE!_ Don't worry if your app doesn't look _exactly_ like the mockup. If the bird images look pixelated on your page, that's totally fine.  
 
 **Home Page:**
 ![homepage](https://media.git.generalassemb.ly/user/8618/files/261bb4ca-cbb6-11e8-86de-e4da123819ce)
@@ -59,10 +55,9 @@ Build your app to the following mocks:
 **Show Page:**
 ![show page](https://media.git.generalassemb.ly/user/8618/files/26595fb4-cbb6-11e8-9d34-3447f8414d6a)
 
-**Create Page:**
-![create page](https://media.git.generalassemb.ly/user/8618/files/25bc5570-cbb6-11e8-9912-eb843afec31c)
+## Data
 
-Use the following for the initial state of your application:
+Use the following data for the initial state of your application:
 
 ```js
 const birds = [
@@ -137,6 +132,24 @@ const birds = [
   }
 ];
 ```
+
+
+### Bonus
+
+**Create Page:** Users should be able to navigate to this page from the
+homepage. It should have a form for adding a new bird with fields for:
+
+- `name`: the bird's common name
+- `genus`: the bird's scientific name
+- `conservationStatus`: If there is a conservation status for the bird
+- `image`: an image of the bird
+- `homepage`: a link to the Audubon Field Guide page.
+
+**Create Page Mockup:** 
+
+![create page](https://media.git.generalassemb.ly/user/8618/files/25bc5570-cbb6-11e8-9912-eb843afec31c)
+
+**Create Page URL:** should have the ending `/bird/add`
 
 ## Plagiarism
 
