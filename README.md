@@ -137,7 +137,9 @@ const birds = [
 ```
 
 
-### Bonus
+### Bonus! 
+
+Finished everything above and want to stretch your brain? Try adding a static create route.
 
 **Create Page:** Users should be able to navigate to this page from the
 homepage. It should have a form for adding a new bird with fields for:
@@ -147,6 +149,8 @@ homepage. It should have a form for adding a new bird with fields for:
 - `conservationStatus`: If there is a conservation status for the bird
 - `image`: an image of the bird
 - `homepage`: a link to the Audubon Field Guide page.
+
+Make sure you add the functionality so that when the user submits the form, it will "add" the new bird to the "database" and will appear on the home as well as have its own show page. (Please note because there's no real database attached to your app, any newly added bird will disappear upon fully refreshing the page!)
 
 **Create Page Mockup:** 
 
