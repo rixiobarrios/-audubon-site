@@ -21,6 +21,8 @@ Create a new React app in the root of this repository (i.e.
 `npx create-react-app audubonApp`) and build your project out from there. You are required to
 turn in your submission by making a pull request on the original repository.
 
+**This assignment will be due Tuesday, 1/21 at 10AM Eastern**
+
 ## Requirements
 
 The Audubon Society has asked you to build them a website where users can see an index of bird images and be able to click on any given bird to see more information about that single bird on their own dedicated show page. 
