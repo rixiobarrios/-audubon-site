@@ -42,8 +42,9 @@ this though).
 
 **React Router:** Implement React Router into your app.
 
-  - The home page should load when the url ending is `/` 
+  - The home page should have a route of `/`
   - The show page should load when the url ending includes the name of the bird, for example `/Acadian+Flycatcher` would take the user to the show page for the Acadian Flycatcher
+    - In other words, the route should be `/:bird`
 
 **Styling:**
 
@@ -151,7 +152,7 @@ homepage. It should have a form for adding a new bird with fields for:
 
 ![create page](https://media.git.generalassemb.ly/user/8618/files/25bc5570-cbb6-11e8-9912-eb843afec31c)
 
-**Create Page URL:** should have the ending `/bird/add`
+**Create Page Route:** `/create`
 
 ## Plagiarism
 
