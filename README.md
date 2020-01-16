@@ -137,7 +137,7 @@ const birds = [
 ```
 
 
-### Bonus! 
+## Bonus! 
 
 Finished everything above and want to stretch your brain? Try adding a static create route.
 
