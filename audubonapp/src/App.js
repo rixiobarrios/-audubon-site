@@ -1,33 +1,50 @@
-import React from "react";
-import Home from "./Home";
-import { birds } from "./birds.js";
-import Showpage from "./Showpage";
+import React, { Component } from "react";
 import "./App.css";
+import Home from "./Home";
+import Showpage from "./Showpage";
+import { birds } from "./birds";
 import { Link, Switch, Route } from "react-router-dom";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
+class App extends Component {
+  constructor() {
+    super();
     this.state = {
-      birds: birds
+      birds: birds,
+      selectedBird: ""
     };
   }
+  setBird = bird => {
+    this.setState({ selectedBird: bird });
+  };
 
   render() {
+    console.log("App shit", this.state.birds);
     return (
       <div>
-        <h1>
-          <nav>
+        <header>
+          <h1>
             <Link to="/">Audubon Society</Link>
-          </nav>
-        </h1>
+          </h1>
+        </header>
         <main>
           <Switch>
-            <Route path="/" exact component={Home} />
             <Route
-              path="/Showpage/:bird"
+              path="/"
+              exact
+              render={props => (
+                <Home birdsList={this.state.birds} setBird={this.setBird} />
+              )}
+            />
+            <Route
+              path="/showpage/:bird"
               render={routerProps => {
-                return <Showpage match={routerProps.match.params.bird} />;
+                console.log("App more shit", routerProps);
+                return (
+                  <Showpage
+                    bird={this.state.selectedBird}
+                    routerBird={routerProps.match.params.bird}
+                  />
+                );
               }}
             />
           </Switch>

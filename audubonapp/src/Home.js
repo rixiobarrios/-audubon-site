@@ -1,28 +1,25 @@
-import React, { Component } from "react";
-import { birds } from "./birds";
+import React from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
 
-class Home extends Component {
+class Home extends React.Component {
   render() {
-    let dataBirds = birds.map(item => {
-      console.log("this is home page");
-      return (
-        <Link to={"/birds/" + item.name}>
-          <img
-            className="birds"
-            src={item.image}
-            alt={item.name}
-            key={item.name}
-          />
-        </Link>
-      );
-    });
-
+    console.log("Home shit", this.props);
     return (
       <>
         <h2>Birds</h2>
-        <p>{dataBirds}</p>
+        <main>
+          {this.props.birdsList.map(bird => {
+            return (
+              <Link
+                to={"/showpage/" + bird.name}
+                onClick={() => this.props.setBird(bird)}
+              >
+                <img className="pics" src={bird.image} alt={bird.name} />
+              </Link>
+            );
+          })}
+        </main>
       </>
     );
   }

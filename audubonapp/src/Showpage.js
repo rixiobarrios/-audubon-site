@@ -1,28 +1,22 @@
-import React, { Component } from "react";
+import React from "react";
 import "./Showpage.css";
+import { Link } from "react-router-dom";
 
-class Showpage extends Component {
-  render() {
-    const { image } = this.props.match.params;
-
-    const selectedBird = this.props.dataBirds.find(
-      birds => birds.image === image
-    );
-    console.log("this is showpage", selectedBird);
-    return (
-      <div>
-        <h2>
-          {selectedBird.name} ({selectedBird.image})
-        </h2>
-        <ul>
-          <li>Image: {selectedBird.image}</li>
-          <li>Change: {selectedBird.name}</li>
-          <li>High: {selectedBird.genus}</li>
-          <li>Low: {selectedBird.conservationStatus}</li>
-          <button>Read More{selectedBird.homepage}</button>
-        </ul>
-      </div>
-    );
-  }
+function Showpage(props) {
+  console.log("individual bird here");
+  return (
+    <div>
+      <p>
+        <img src={props.bird.image} alt={props.bird.name} />
+      </p>
+      <p>{props.bird.name}</p>
+      <p>{props.bird.genus}</p>
+      <p>{props.bird.conservationStatus}</p>
+      <button class="button">
+        <a href={props.bird.homepage}>Read More</a>
+      </button>
+    </div>
+  );
 }
+
 export default Showpage;
